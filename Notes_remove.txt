@@ -1,0 +1,24 @@
+0- add flashdata msg and err_msg in moudle in inc folders
+1-add description of the site in the main page side to the login form
+2-Check sql Unique
+3-check upload file if user upload but the upload fail
+4-Make a function to check url
+-----------------------------------------
+* Register
+
+* Login 
+
+* Login --> bookmark with msg successfully
+
+* Bookmark Table
+
+* Add bookmark 
+
+* Delete Bookmark
+
+* Edit bookmark
+
+---------------------------------------------
+* Profile page
+
+http://localhost/bookmark/table/edit/4

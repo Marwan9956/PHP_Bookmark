@@ -1,0 +1,515 @@
+:root{
+	--bor  	    : 1px solid #f0f0f0;
+	--bor-input : 1px solid #dcdcdc;
+	--bor-img   : 1px solid #f0f0f0;
+	--bor-focus : 1px solid #7ba1bf;
+	--bor-qty   : 1px solid #ccc;
+	--h         : #3c3c3c;
+	--p         : #565656;
+	
+	
+	
+	--link            : #353535;
+	--link-hover      : #525252;
+	--btn-back        : #ccc;
+	--btn-back-hover  : #ccc;
+	--btn-hover       : #e3e3e3;
+	--btn-check	      : #397f26;
+	--btn-check-hv    : #469e2e;
+	--btn-update      : #ff931a;
+	--btn-update-hv   : #ffa22d;
+	
+	/*Text color */
+	--msg             : #313131;
+	--msg-alert       : #ffffff;
+	
+	/*Background color of msg */
+	--msg-bg          : #fff;
+	--msg-bg-danger   : #f5595a;
+	--msg-bg-success  : #42b44a;
+	--msg-bg-alert    : #ff8a35;
+	
+	/*table*/
+	--tr-bg           : #fbfbfb;
+	--tr-hover 	      : #f2f2f2;
+}
+
+body{
+	
+}
+
+a{
+	text-decoration:none;
+	color:var(--link);
+	font-size:1.1em;
+	cursor:pointer;
+}
+a:hover{
+	color:var(--link-hover);
+}
+
+li{
+	list-style:none;
+}
+
+.container{
+	width : 1400px;
+	margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color:var(--h);
+}
+
+h1{
+	font-size : 32px;
+}
+
+p{
+	color:var(--p);
+}
+
+
+h4{
+	padding:0;
+}
+
+label ,input{
+	display:block;
+}
+label{
+	margin-top:6px;
+	font-size:1.1em;
+	padding:10px;
+	padding-left:3px;
+	color:var(--h);
+}
+.center{
+	text-align:center;
+}
+hr{
+	display:block;
+	margin:30px 0;
+	border:1px solid #f7f7f7;
+}
+/****************************Header*************************/
+.web-logo{
+	margin-top:25px;
+	margin-bottom:10px;
+	border-bottom:var(--bor);
+}
+header{
+	display    :flex;
+	flex-wrap  :nowrap;
+	align-items:center;
+	padding-bottom:5px;
+	border-bottom:var(--bor);
+}
+header >*{
+	/*flex-grow:1;*/
+}
+header .logo{
+	width:170px;
+	font-size:1.2em;
+}
+header nav {
+	flex-grow:2;
+}
+header nav ul{
+	display  :flex;
+	flex-wrap:nowrap;
+}
+header nav ul li{
+	flex-basis:100px;
+}
+.search-box{
+	flex-grow:1;
+}
+.search-box form{
+	display:flex;
+	flex-wrap:nowrap;
+	align-items:center;
+	padding:0;
+	margin:0;
+	height:100%;
+	width:100%;
+	flex-direction: row-reverse;
+}
+.search-box form >input{
+	padding:4px;
+	margin:0;
+	height:100%;
+	border:none;
+	border-top   :var(--bor);
+	border-bottom:var(--bor);
+	border-left  : var(--bor);
+}
+.search-box form >input[type="text"], .search-box form >input[type="password"]{
+	padding-left:5px;
+	width:170px;
+}
+.search-box form >input[type="submit"]{
+	height:100%;
+	border-right:var(--bor);
+	border-left:none;
+	padding:4px 10px;
+}
+.search-box form >input[type="text"]:focus , .search-box form >input[type="password"]:focus{
+	border:var(--bor-focus);
+}
+.btn-search{
+	cursor:pointer;
+}
+.btn-search:hover{
+	background-color: var(--btn-hover);
+}
+
+.logout{
+	display:flex;
+	align-items:stretch;
+	justify-content: flex-end;
+	//background-color:red;
+	align-content: center;
+}
+.logout > *{
+	margin-left:15px;
+	margin-right:15px;
+	border-left:var(--bor);
+	padding-left:15px;
+}
+.logout label{
+	//font-size:0.85em;
+	font-style:italic;
+	padding:0;
+	margin:0;
+}
+.btn-logout{
+	
+}
+.btn-logout:hover{
+	color:#f96100;
+}
+.btn-edit:hover{
+	color:#008aff;
+}
+/**************************Container*************************/
+.splitContainer{
+	display:flex;
+	flex-wrap:nowrap;
+	//align-items:center;
+}
+.splitContainer > div{
+	flex-grow:1;
+}
+.splitContainer .mainArea{
+	flex-basis:65%;
+	margin-top:10px;
+	padding-top:18px;
+}
+.splitContainer .products{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+.noproducts{
+	text-align:center;
+	
+}
+.noproducts > *{
+	padding:20px;
+}
+.product{
+	width:30%;
+	text-align:center;
+	padding:8px;
+}
+.product img{
+	width:90%;
+}
+.productTitle{
+	margin:0;
+	padding:8px;
+	font-size:1.3em;
+}
+.price{
+	font-style:italic;
+	margin:0;
+	padding:0;
+	font-size:1.1em;
+}
+.product label{
+	display:block;
+	font-size:1.2em;
+	padding:5px;
+	margin-top:5px;
+}
+
+.btn-quantity{
+	display:block;
+	margin :4px auto 2px auto;
+	width:50%;
+	padding-left:20px;
+}
+.btn{
+	display:block;
+	width:80%;
+	margin: 5px auto 15px auto;
+	padding:3px;
+	cursor:pointer;
+}
+/****************************Login Container*************************/
+.login-container{
+	width:40%;
+	margin: 20px auto;
+	background-color:#f8f8f8;
+	padding:20px;
+	border:var(--bor);
+	border-radius:5px;
+
+}
+.login-container hr{
+	border-color:#ebebeb;
+}
+.login-container a{
+	color:#3399d2;
+	display:block;
+}
+.login-container a:hover{
+	color:#53afe9;
+}
+.login-container input{
+	width:100%;
+}
+.login-container input[type="email"], .login-container input[type="password"]{
+	width:96%;
+}
+/****************************register********************/
+.register{
+	
+}
+
+.register h2{
+	padding-bottom:15px;
+	border-bottom:var(--bor);
+}
+
+.inpTxt{
+	width:79%;
+	border-radius:4px;
+	border:var(--bor-input);
+	padding:8px 5px 8px 15px;
+	box-sizing:border-box;
+}
+.register input:focus{
+	border:var(--bor-focus);
+}
+.btn-submit{
+	border-radius:4px;
+	border:var(--bor-input);
+	margin-top:20px;
+	width:81%;
+	padding: 8px 0;
+	cursor:pointer;
+	font-size:1.05em;
+	font-family:serif;
+	color:var(--h);
+}
+.btn-submit:hover{
+	//border:var(--bor-focus);
+	background-color:var(--btn-hover);
+}
+
+.btn-login{
+	width:79%;
+}
+.btn-checkout{
+	width:100%;
+	border:none;
+	color:#fff;
+	padding: 8px 0;
+	border-radius:4px;
+	background-color:var(--btn-check);
+}
+.btn-checkout:hover{
+	color:#fff;
+	background-color:var(--btn-check-hv);
+}
+.btn-back{
+	border:var(--bor);
+	text-align:center;
+	width:50%;
+	padding:8px 0;
+}
+.btn-back:hover{
+	background-color:var(--btn-hover);
+}
+
+.btn-update{
+	width:100%;
+	background-color:var(--btn-update);
+	color:#fff;
+}
+.btn-update:hover{
+	color:#fff;
+	background-color:var(--btn-update-hv);
+}
+.btn-login-main{
+	width:83%;
+}
+
+.msg{
+	padding:15px;
+	margin: 8px auto;
+	border-radius:3px;
+	color:var(--msg);
+	background-color:var(--msg-bg);
+	box-shadow: 0px 5px 5px 0px #6f6f6f;
+	width:78%;
+} 
+
+.msg-danger{
+	color: var(--msg-alert);
+	background-color:var(--msg-bg-danger);
+}
+.msg-success{
+	color: var(--msg-alert);
+	background-color:var(--msg-bg-success);
+}
+.msg-alert{
+	color: var(--msg-alert);
+	background-color:var(--msg-bg-alert);
+}
+
+textarea{
+	width:77%;
+	height:200px;
+	resize: none;
+	overflow:auto;
+	padding:20px;
+	font-size:1.2em;
+	color:var(--p);
+}
+/**************************Profile****************************/
+.user-profile{
+	width:300px;
+	height:180px;
+}
+
+
+/**************************Cart Table**************************/
+.cart_qty_num{
+	width : 30px;
+	//padding-left:10px;
+	padding: 1px 0 1px 8px;
+}
+table{
+	color:var(--p);
+	border-collapse: collapse;
+	width:100%;
+	text-align:center;
+}
+th{
+	font-weight:bold;
+	font-size:1.1em;
+}
+tr{
+	border:var(--bor);
+}
+tr:nth-of-type(odd){
+	background-color:var(--tr-bg) ;
+}
+tr:hover{
+	background-color:var(--tr-hover);
+}
+tr.table-first-row{
+	background-color:#00aa58;
+	color:#fff;
+}
+th,td{
+	padding:20px 10px;
+	font-weight:normal;
+}
+td{
+	font-size:0.85em;
+}
+.right{
+	text-align:right;
+}
+
+.checkout table{
+	width:100%;
+}
+.checkout table th,.checkout table td{
+	
+	text-align:center;
+}
+.checkout table input{
+	display:inline-block;
+}
+/**************************About*******************************/
+.about{
+	
+}
+.about img{
+	width:100%;
+	height:320px;
+}
+.about p{
+	text-align:justify;
+	
+	padding:20px 0 20px 0;
+}
+.about-content{
+	padding-right:25%;
+	padding-left:4px;
+}
+
+/**************************Footer******************************/
+footer{
+	display:flex;
+	flex-wrap:nowrap;
+	justify-content:space-between;
+	align-items:center;
+}
+footer.marg{
+	margin-top   :25px;
+	margin-bottom:25px;
+	padding:15px 4px;
+}
+footer > nav , footer > div{
+	flex-grow:1;
+}
+footer nav ul{
+	display  :flex;
+	flex-wrap:nowrap;
+	margin:0;
+	padding:0;
+}
+footer nav ul li{
+	flex-basis:85px;
+	text-align:center;
+}
+footer > div{
+	text-align:right;
+	padding-right:8px;
+}
+footer a{
+	font-size:1em;
+}
+
+
+
+/*************************************Media Query*******************/
+@media screen and (max-width: 1400px){
+	.container{
+		width:100%;
+	}
+}
+
+
+
+
+
+
+
+
