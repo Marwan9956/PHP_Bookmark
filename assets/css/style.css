@@ -35,7 +35,10 @@
 }
 
 body{
-	
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin:0;
 }
 
 a{
@@ -111,6 +114,7 @@ header >*{
 header .logo{
 	width:170px;
 	font-size:1.2em;
+	margin-left: 25px;
 }
 header nav {
 	flex-grow:2;
@@ -470,6 +474,7 @@ footer{
 	flex-wrap:nowrap;
 	justify-content:space-between;
 	align-items:center;
+	margin-top: auto;
 }
 footer.marg{
 	margin-top   :25px;
