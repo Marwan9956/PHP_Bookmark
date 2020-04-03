@@ -1,3 +1,12 @@
+# PHP Bookmark
+
+codeigniter web app 
+
+## Features
+
+- sign in sign out  
+- crud operations
+
 # CodeIgniter 2
 Open Source PHP Framework (originally from EllisLab)
 
