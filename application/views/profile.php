@@ -27,8 +27,6 @@ $(document).ready(function(){
 
 <form id="edit_profile" method="post" action="<?php base_url("profile/edit");?>">
 <?php if($user):?>
-	<?php //print_r($user)?>
-	
 	<img class="user-profile" src="url.jpg" />
 	<label for="username">Username</label>
 	<input id="username" type="text" name="username" class="inpTxt" placeholder="username"

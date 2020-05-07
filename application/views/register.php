@@ -4,7 +4,7 @@
 <!--------Error Message----------->
 <?php $this->load->view('inc/layout/message'); ?>
 
-<?php echo validation_errors("<div class='alert alert-danger'>","</div>"); ?>
+
 <form method="post" action="<?php base_url("register");?>" enctype="multipart/form-data">
 	<div class="form-group">
 		<label for="username">Username</label>

@@ -22,7 +22,12 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/bookmark/';
+//$config['base_url'] = 'http://localhost/bookmark/';
+if($_SERVER['SERVER_NAME'] === 'localhost'){
+	$config['base_url'] = 'http://localhost/bookmark/';
+}else{
+	$config['base_url'] = $_SERVER['SERVER_NAME'] . '/bookmark'  . '/' ;
+}
 
 /*
 |--------------------------------------------------------------------------
